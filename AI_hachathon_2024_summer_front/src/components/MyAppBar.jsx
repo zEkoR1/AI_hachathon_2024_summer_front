@@ -1,6 +1,4 @@
-import React from 'react';
-import { Box, Flex, IconButton, Heading, Button, Stack } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { Box, Flex, Heading, Button, Stack } from '@chakra-ui/react';
 
 const MyAppBar = () => {
   return (

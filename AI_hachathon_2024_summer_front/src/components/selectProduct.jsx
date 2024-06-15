@@ -2,7 +2,6 @@ import {Input, VStack, Text, Box,} from '@chakra-ui/react'
 
 const SelectProduct = () => {
 
-    // Your component logic here
     return (
         <div>
             <Box

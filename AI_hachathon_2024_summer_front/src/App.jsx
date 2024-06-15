@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import SelectProduct from "./components/selectProduct.jsx";
 import {ChakraProvider, Grid, GridItem} from '@chakra-ui/react';
@@ -11,19 +10,26 @@ function App() {
     return (
         <ChakraProvider>
             <div className="App">
-                <MyAppBar/>
-                <Grid templateColumns='repeat(5, 1fr)' gap={6}>
-                    <GridItem w='100%'  />
-                    <GridItem w='100%' >
+
+                <Grid templateColumns='repeat(5, 3fr)' gap={12}>
+                    <GridItem w='100%' colSpan={5} rowSpan={2}>
+                        <MyAppBar/>
+                    </GridItem>
+                    {/*<GridItem w='100%' colSpan={5}/>*/}
+                    <GridItem w='100%' colSpan={1}/>
+                    <GridItem w='100%' colSpan={1}>
                         <SelectProduct/>
                     </GridItem>
-                    <GridItem w='100%'  />
-                    <GridItem w='100%'  >
+                    <GridItem w='100%' colSpan={1}/>
+                    <GridItem w='100%' colSpan={1}>
                         <SelectProduct/>
                     </GridItem>
-                <GridItem w='100%'  />
+                    <GridItem w='100%' colSpan={1}/>
+                    <GridItem w='100%' colSpan={1}/>
+                    <GridItem w='100%' colSpan={3}>
+                        <UserWishes/>
+                    </GridItem>
                 </Grid>
-                <UserWishes />
 
 
             </div>
@@ -31,5 +37,6 @@ function App() {
     );
 
 
-
+}
 export default App
+
