@@ -1,4 +1,5 @@
-import { Box, Flex, Heading, Button, Stack } from '@chakra-ui/react';
+// eslint-disable-next-line no-unused-vars
+import { Box, Flex, Heading, Button, Stack, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 
 const MyAppBar = () => {
   return (
@@ -11,29 +12,37 @@ const MyAppBar = () => {
       height="4rem"
       bg="purple"
       px={4}
-      zIndex={1}
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      boxShadow="sm"
+      boxShadow="lg"
     >
       <Flex
         h="100%"
-        alignItems="center"
         justifyContent="space-between"
-        width="100%"
+        // width="100%"
         maxWidth="1200px"
       >
         <Flex alignItems="center">
-          <Heading as="h2" size="lg" color="white" mr={4} fontWeight="bold" letterSpacing="wide" variant="solid">
+          <Heading size="lg" color="white" mr={4} fontWeight="bold" letterSpacing="wide" variant="solid">
             Macri Specs
           </Heading>
-          <Stack padding = "15px"  direction="row" spacing={4}>
-            <Button colorScheme="teal" variant="solid">
-              Comparative analysis
-            </Button>
+          {/*<Stack padding = "15px"  direction="row" spacing={4}>*/}
+          {/*  <Button colorScheme="purple" variant="solid">*/}
+          {/*    Comparative analysis*/}
+          {/*  </Button>*/}
 
-          </Stack>
+          {/*</Stack>*/}
+          <Breadcrumb color='white'>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem>
+              <BreadcrumbLink href='#'>Docs</BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink href='#'>Specs</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
         </Flex>
 
       </Flex>

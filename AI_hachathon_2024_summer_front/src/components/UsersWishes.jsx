@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Input, Text } from "@chakra-ui/react";
+import  { useState } from "react";
+import { Input, Text, Button, VStack } from "@chakra-ui/react";
 
 const UserWishes = () => {
   const [input, setInput] = useState("");
@@ -10,12 +10,22 @@ const UserWishes = () => {
 
   return (
     <>
-      <Input
-        value={input}
-        onChange={handleChange}
-        placeholder='Enter your wishes here...'
-        size='large'
-      />
+        <VStack spacing={8}>
+            <Text fontSize='3xl' mb={4}>
+                What is Important<br />for You <br/> Tell about your<br/> use case
+            </Text>
+
+            <Input
+                value={input}
+                onChange={handleChange}
+                placeholder='Enter your wishes here...'
+                size='lg'
+            />
+
+            <Button colorScheme='purple' variant='outline'>
+                Help me Choose
+            </Button>
+        </VStack>
     </>
   );
 };
